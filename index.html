@@ -7,26 +7,72 @@
 
 
 <h3>Please enter the String you would like to encode</h3>
-<input type="text" id="string">
+<input type="text" id="string1">
 <br>
 <h3>How much would you like to increment it by?</h3>
 <input type="number" id="inc">
 <br>
 <button onclick="encode()">ENCODE</button>
 
+
+<h1>String Decoder</h1>
+
+
+
+<h3>Please enter the String you would like to Decode</h3>
+<input type="text" id="string2">
+<br>
+<h3>How much was the message incremented by?</h3>
+<input type="number" id="inc2">
+<br>
+<button onclick="decode()">DECODE</button>
+
+
+
+
+
 <script>
     function encode(){
-    var string1 = document.getElementByID("string");
+        var string1 = "";
+        string1 = document.getElementById("string1").value;
+        
+        var inc = document.getElementById("inc").value;
+        var incr = parseInt(inc)
 
-    var i;
-    for (i = 0; i < string1.length; i++) {
-        var n = string1[i];
-        var x = String.fromCharCode(c.charCodeAt(0) + inc);
-      }
-    return x;
-</script>
+        var x;
+        var s = "";
+        var i;
+
+        for (i = 0; i < string1.length; i++) {
+            x = string1.charCodeAt(i);
+            s += String.fromCharCode(x + incr);
+        }
+
+        alert("Your encoded message is: " + s);
 
 
+
+
+    }
+
+    function decode(){
+        var string1 = "";
+        string1 = document.getElementById("string2").value;
+        
+        var inc = document.getElementById("inc2").value;
+        var incr = parseInt(inc)
+
+        var x;
+        var s = "";
+        var i;
+
+        for (i = 0; i < string1.length; i++) {
+            x = string1.charCodeAt(i);
+            s += String.fromCharCode(x - incr);
+        }
+
+        alert("Your encoded message is: " + s);
+    }
 </script>
 
 </body>

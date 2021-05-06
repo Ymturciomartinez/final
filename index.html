@@ -1,4 +1,33 @@
-The current date is
-<% import datetime
-print datetime.date.today().strftime("%d:%m:%y")
-%>
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>String Encoder</h1>
+
+
+
+<h3>Please enter the String you would like to encode</h3>
+<input type="text" id="string">
+<br>
+<h3>How much would you like to increment it by?</h3>
+<input type="number" id="inc">
+<br>
+<button onclick="encode()">ENCODE</button>
+
+<script>
+    function encode(){
+    var string1 = document.getElementByID("string");
+
+    var i;
+    for (i = 0; i < string1.length; i++) {
+        var n = string1[i];
+        var x = String.fromCharCode(c.charCodeAt(0) + inc);
+      }
+    return x;
+</script>
+
+
+</script>
+
+</body>
+</html>

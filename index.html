@@ -45,7 +45,7 @@
 
         for (i = 0; i < string1.length; i++) {
             x = string1.charCodeAt(i);
-            s += String.fromCharCode(x + incr);
+            s += String.fromCharCode(x + 65 + incr);
         }
 
         alert("Your encoded message is: " + s);
@@ -68,7 +68,7 @@
 
         for (i = 0; i < string1.length; i++) {
             x = string1.charCodeAt(i);
-            s += String.fromCharCode(x - incr);
+            s += String.fromCharCode(x - 65 - incr);
         }
 
         alert("Your encoded message is: " + s);

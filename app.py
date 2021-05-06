@@ -2,7 +2,7 @@ from flask import Flask
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/home")
 
 def home():
     return "Hello! this is the encoder <h1> HELLO <h1>"
